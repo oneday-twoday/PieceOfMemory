@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기억의 조각</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+
+</head>
+<body>
+    <!-- 상단바 GNB -->
+    <div class="navbar">
+        <div class="logo-area">
+            <a data-target="section1">
+                <img src="./Image/App_Logo.png" alt="로고">
+                <span class="logo-text">기억의 조각</span>
+            </a>
+        </div>
+        <div class="menu">
+            <a data-target="section2">영상</a>
+            <a data-target="section3">배경</a>
+            <a data-target="section4">서비스</a>
+            <a data-target="section5">디자인</a>
+        </div>
+    </div>
+
+<!-- 1. 메인 화면 -->
+<section id="section1" class="section bg-dark">
+    <div class="hero">
+        <div class="hero-left">
+            <div class="sub-title">가족과 함께하는 기억 관리</div>
+            <div class="logo-text-group">
+                <div class="hero-title">기억의 조각</div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <!-- 나중에 여기에 이미지나 애니메이션 -->
+            <!-- <img src="./Image/Phone2_Main.png" alt="예시 이미지" -->
+            <img src="./Image/iMockup - iPhone 15 Pro Max-1.png" alt="예시 이미지"
+            class="phone phone-left">
+            <!-- <img src="./Image/Phone1_Main.png" alt="예시 이미지" -->
+            <img src="./Image/iMockup - iPhone 15 Pro Max.png" alt="예시 이미지"
+            class="phone phone-right">
+        </div>
+    </div>
+</section>
+        
+<!-- 2. 영상 -->
+<section id="section2" class="section bg-light">
+    <div class="video-container">
+        <iframe 
+        src="https://www.youtube.com/embed/PS9ccz0SnUw" 
+        title="YouTube video" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- 3. 배경 -->
+<section id="section3" class="section bg-dark">
+    <h2 class="section3-title">치매 인구 증가 현황</h2>
+    <p class="top-description">
+    2025년 보건복지부가 조사한 치매역학조사에 따르면 치매 환자 수는 약 97만 명이며, 2026년에는 100만 명을 <br>
+    넘을 것으로 예상됩니다.
+    저희는 치매 환자들의 기억 회복을 돕는 서비스가 필요하다고 판단했습니다.
+    </p>
+    <div class="charts">
+        <div class="chart-box donut-box">
+            <div class="chart-title">
+            <h3>연령대별 치매환자</h3>
+            </div>
+            <canvas id="donutChart"></canvas>
+        </div>
+        <div class="chart-box">
+            <div class="chart-title">
+            <h3>치매환자 수 (2025~2050)</h3>
+            </div>
+            <canvas id="barChart" width="400" height="350"></canvas>
+        </div>
+    </div>
+
+    <div class="highlight">
+    <h2 class="section3-title">딥페이크</h2>
+    <p class="top-description">딥페이크 기술을 긍정적으로 활용하여 부정적인 인식을 전환</p>
+    </div>
+
+    <div class="deepfake-text">긍정적 사례</div>
+
+    <div class="cards">
+    <div class="card">디지털 추모<br/><span>사랑하는 고인의 생전 모습을<br/>영상으로 재현하여 새로운 방식으로 추모</span></div>
+    <div class="card">과거 장면 리마스터링<br/><span>오래된 사진이나 영상을 복원하여<br/>과거를 생생하게 재현</span></div>
+    <div class="card">역사적 활용<br/><span>역사적 인물의 영상과 음성을 복원하여<br/>다양한 교육 및 홍보 콘텐츠로 활용</span></div>
+    <div class="card">정신건강 치료<br/><span>우울증이나 PTSD 환자들이<br> 소중한 인물과의 대화 시뮬레이션을 통해<br/>감정을 정리하고 상담을 유도</span></div>
+    <div class="card">의료 교육 활용<br/><span>다양한 상태의 가짜 환자 영상을 생성하고<br/>그들의 표정과 말투, 치료법 등을 학습</span></div>
+    <div class="card">기억 복원<br/><span>가족이나 친구의 과거 모습을 복원해<br/>인지 퇴화를 늦추고 정서정 안정을 줌</span></div>
+    </div>
+
+        <!-- 페르소나 -->
+    <div class="interview-section">
+        <h2 class="section3-title">치매환자 가족 인터뷰</h2>
+        <p class="top-description">
+            기억이 흐려질 때의 감정과 돌봄 속 불편함에 대해 이야기를 들어보았습니다.<br>
+            치매 초기 환자와 가족들은 어떤 점에서 가장 불안하고 힘들까요?
+        </p>
+
+        <div class="interview-cards">
+            <!-- 카드 1: 정형종 -->
+            <div class="interview-card">
+                <div class="interview-top split-layout">
+                    <div class="interview-left">
+                        <div class="interview-name">정형종</div>
+                        <div class="interview-role">67세 치매 초기 환자</div>
+                        <div class="interview-quote">
+                            <span>“제가 어떻게 될지 몰라</span><br>
+                            <span>너무 두려워요.”</span>
+                        </div>
+                    </div>
+                    <div class="interview-avatar">
+                    <img src="./Image/Minsik.png" alt="정형종 아바타">
+                    </div>
+                </div>
+                <div class="interview-needs">
+                    <strong>NEEDS</strong>
+                    <ul>
+                    <li>지금 나의 상태를 쉽게 이해하고 기록할 수 있었으면 해요.</li>
+                    <li>기억이 흐려지더라도 나를 잊지 않고 존중받고 싶어요.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 카드 2: 정미선 -->
+            <div class="interview-card">
+                <div class="interview-top split-layout">
+                    <div class="interview-left">
+                    <div class="interview-name">정미선</div>
+                    <div class="interview-role">42세 직장인 자녀</div>
+                    <div class="interview-quote">
+                        <span>“맞벌이라 바쁜데</span><br>
+                        <span>아버지를 혼자두기 걱정돼요..”</span>
+                    </div>
+                    </div>
+                    <div class="interview-avatar">
+                    <img src="./Image/Hyeyeon.png" alt="정인석 아바타">
+                    </div>
+                </div>
+                <div class="interview-needs">
+                    <strong>NEEDS</strong>
+                    <ul>
+                    <li>바쁠 때도 안심할 수 있는 돌봄 서비스가 필요해요.</li>
+                    <li>혼자 있어도 안전하게 지내셨으면 해요.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 카드 3: 남궁태형 -->
+            <div class="interview-card">
+                <div class="interview-top split-layout">
+                    <div class="interview-left">
+                    <div class="interview-name">남궁태형</div>
+                    <div class="interview-role">18세 고등학생 손자</div>
+                    <div class="interview-quote">
+                        <span>“자주 뵐 순 없지만, 누구나</span><br>
+                        <span>스마트폰은 가지고 있잖아!”</span>
+                    </div>
+                    </div>
+                    <div class="interview-avatar">
+                    <img src="./Image/Jeonghan.png" alt="남궁태현 아바타">
+                    </div>
+                </div>
+                <div class="interview-needs">
+                    <strong>NEEDS</strong>
+                    <ul>
+                    <li>스마트폰으로 할아버지와 쉽게 소통통하고 싶어요.</li>
+                    <li>자주 못 봬도 가까이 느낄 방법이 있으면 해요.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 정보구조도 -->
+    <div class="IA">
+        <div class="title-IA">
+            <p>IA</p>
+        </div>
+        <div class="image-IA">
+            <img src="./Image/IA.png" alt="">
+        </div>
+    </div>
+
+</section>
+
+<!-- 4. 서비스-기억퀴즈 -->
+<section id="section4" class="section section-services bg-light">
+    <div class="service-header">
+        <p class="service-title">“우리만의 4가지 서비스”</p>
+        <p class="service-desc">걱정마세요 기억의 조각이 끝까지 함께 할게요</p>
+        <div class="service-label">
+            <span class="service-num">01</span>
+            <span class="service-name">잊혀진 이름을 기억나게, 기억퀴즈</span>
+        </div>
+    </div>
+
+    <div class="service-layout">
+        <!-- 좌측 텍스트 -->
+        <div class="side-text left">
+            <p>
+                <strong>가족 이름 맞히기</strong><br>
+                딥페이크 기술로 구현된 퀴즈를 통해 가족의 얼굴, 이름, 
+                가족 정보 등을 자연스럽게 되새기며 소중한 순간을 다시 떠올릴 수 있어요.
+            </p>
+            <p>
+                <strong>단어 외우기</strong><br>
+                카테고리별 퀴즈로 다양한 단어를 자연스럽게 반복 학습할 수 있어요. 
+                기억력을 자극해보세요.
+            </p>
+        </div>
+
+        <!-- 중앙 휴대폰 이미지 -->
+        <div class="phones">
+        <img src="./Image/iphone_Quiz.png" alt="왼쪽 휴대폰" class="phone-img">
+        <img src="./Image/퀴즈eksdj.jpg" alt="오른쪽 휴대폰" class="phone-img">
+        </div>
+
+        <!-- 우측 텍스트 -->
+        <div class="side-text right">
+        <p><strong>카테고리별 단어 학습</strong><br>
+            관심 분야로 구성된 7가지 카테고리를 통해<br>
+            단어를 쉽고 재미있게 외울 수 있어요.</p>
+        </div>
+    </div>
+
+    <!-- 새 퀴즈 인터랙션 섹션 -->
+    <div class="quiz-interaction">
+        <div class="quiz-instruction">
+            <div class="quiz-step">
+                <span class="quiz-step-num">-</span>
+                <p>영상 확인 후<br>가족의 이름을 입력</p>
+            </div>
+            <div class="quiz-step">
+                <span class="quiz-step-num">○</span>
+                <p>정답일 때 인물마다<br>정답 멘트 다름</p>
+            </div>
+            <div class="quiz-step">
+                <span class="quiz-step-num">✗</span>
+                <p>틀렸을 때 인물마다<br>오답 멘트 다름</p>
+            </div>
+            <div class="quiz-step">
+                <span class="quiz-step-num">💡</span>
+                <p>힌트 아이콘 클릭 시<br>인물 특징 설명</p>
+            </div>
+        </div>
+
+        <div class="quiz-images">
+            <img src="./Image/Design_Quiz1.png" alt="영상 확인" class="quiz-img">
+            <img src="./Image/Design_Quiz2.jpg" alt="정답 멘트" class="quiz-img">
+            <img src="./Image/Design_Quiz3.jpg" alt="오답 멘트" class="quiz-img">
+            <img src="./Image/Design_Quiz4.jpg" alt="힌트 멘트" class="quiz-img">
+        </div>
+    </div>
+</section>
+
+<!-- 4. 서비스-앨범 -->
+<section id="section4_Album" class="section section-services bg-dark">
+    <div class="memory-header">
+        <p class="serviceAlbum-num">02</p>
+        <p class="serviceAlbum-name">
+            잊혀진 이름을 다시 꺼내보는, 추억앨범
+        </p>
+    </div>
+
+    <!-- 이미지 4개 영역 -->
+    <div class="memory-layout">
+        <!-- 1. 모든사진 -->
+        <div class="memory-block">
+            <p class="memory-category">모든사진</p>
+            <p class="memory-desc">저장한 사진들을 한눈에</p>
+            <img src="./Image/Design_Album1.png" alt="모든 사진">
+        </div>
+
+        <!-- 2. 즐겨찾기 -->
+        <div class="memory-block">
+            <p class="memory-category">즐겨찾기</p>
+            <p class="memory-desc">애정이 가는 사진들을 모아보기</p>
+            <img src="./Image/Design_Album2.png" alt="즐겨찾기">
+        </div>
+
+        <!-- 3. 추억사진 -->
+        <div class="memory-block">
+            <p class="memory-category">추억사진</p>
+            <p class="memory-desc">년도별, 월별 정리</p>
+            <img src="./Image/Design_Album3.png" alt="추억사진">
+
+        </div>
+
+        <!-- 4. 위치기반 -->
+        <div class="memory-block">
+            <p class="memory-category">위치기반</p>
+            <p class="memory-desc">사진을 찍은 위치</p>
+            <img src="./Image/Design_Album4.png" alt="위치기반">
+        </div>
+    </div>
+
+    <div class="upload-wrapper">
+        <div class="upload-description">
+            <p class="memory-category">업로드하기</p>
+            <p class="memory-desc">
+            사진을 업로드하면 딥페이크가 인물을 인식해 사진을<br>
+            영상으로 갤러리 • 카메라 • 파일에서 자유롭게 선택해 주세요.
+            </p>
+        </div>
+
+        <div class="upload-image">
+            <img src="./Image/Design_AlbumUnder.png" alt="업로드하기 시연 이미지">
+        </div>
+    </div>
+</section>
+
+<!-- 4. 서비스-관계도 -->
+<section id="section4_Family" class="section section-services bg-light">
+    <div class="container">
+        <div class="family-header">
+            <p class="serviceFamily-num">03</p>
+            <p class="serviceFamily-name">
+                복잡한 가족관계 한눈에 쉽게, 가족관계도
+            </p>
+        </div>
+
+        <div class="family-layout">
+            <!-- 좌측 텍스트: 가족관계도 설명 -->
+            <div class="familyside-text left">
+                <p>
+                <span>양방향 스크롤</span><br>
+                자유롭게 탐색하세요.<br>
+                양방향 스크롤로 넓은 화면을<br> 더욱 더 편하게 이동할 수 있어요!
+                </p>
+            </div>
+
+            <!-- 중앙 이미지: 가족관계도 + 상세페이지 -->
+            <div class="phones">
+                <img src="./Image/Design_FamilyL.png" alt="가족관계도 이미지" class="phone-img">
+                <img src="./Image/Design_FamilyR.png" alt="상세페이지 이미지" class="phone-img">
+            </div>
+
+            <!-- 우측 텍스트: 상세페이지 설명 -->
+            <div class="familyside-text right">
+                <p>
+                <span>상세페이지</span><br>
+                잊고 있던 기억까지 기억나게.<br>
+                가족의 자세한 정보를 확인하세요.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. 서비스-일정관리 -->
+<section id="section4_Calender" class="section section-services bg-dark">
+    <div class="calender-header">
+        <p class="servicecalender-num">04</p>
+        <p class="servicecalender-name">
+            일정들을 더 기억하기 쉽게, 일정관리
+        </p>
+    </div>
+
+    <!-- 이미지 배치 -->
+    <div class="calender-image-grid">
+        <!-- 상단 3개 -->
+        <div class="row top-row">
+        <img src="./Image/Design_Calender1.png" alt="중요도 기준 일정" />
+        <img src="./Image/Design_Calender2.png" alt="중요일정" />
+        <img src="./Image/Design_Calender3.png" alt="일반일정" />
+        </div>
+
+        <!-- 하단 2개 -->
+        <div class="row bottom-row">
+        <img src="./Image/Design_Calender4.png" alt="전체 일정" />
+        <img src="./Image/Design_Calender5.png" alt="상세 일정" />
+        </div>
+    </div>
+
+    <div class="calender-reminder-section">
+        <div class="pink-dot"></div>
+
+        <div class="reminder-text">
+            <p class="reminder-title">기억하지 못했던 오늘의<br />일정을 알려드려요.</p>
+            <p class="reminder-desc">
+            당신의 잊혀진 일정도 시간 순으로 쉽게 확인해요!<br />
+            미처 기억하지 못한 일정들을 알려드려요.
+            </p>
+        </div>
+
+        <!-- 이미지들 -->
+        <div class="reminder-image-wrapper">
+            <!-- 1줄에 1장 -->
+            <div class="reminder-row single-image">
+                <img src="./Image/Design_CalenderUnder1.png" alt="기억의 조각 알림" />
+            </div>
+
+            <!-- 2줄에 2장 -->
+            <div class="reminder-row double-image">
+                <img src="./Image/Design_CalenderUnder2.png" alt="앱 아이콘 뱃지" />
+                <img src="./Image/Design_CalenderUnder3.png" alt="홈화면 일정" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. 디자인 -->
+<section id="section5" class="intro-section bg-light">
+    <img src="./Image/App_Logo.png" alt="기억의 조각 로고" class="intro-logo" />
+    <h1 class="intro-title">기억의 조각</h1>
+    <p class="intro-desc">“당신의 잃어버린 기억의 조각을 맞춰드립니다.”</p>
+    <p class="intro-desc">치매 환자와 가족들을 위한 커뮤니케이션 앱으로, <br>
+        딥페이크 기술을 활용하여 환자의 기억 복원을 도와주는 앱 서비스</p>
+</section>
+
+<!-- 5. 디자인_컬러 -->
+<section id="section5_Color" class="section color-style-section bg-dark">
+    <div class="section-title">Color</div>
+
+    <div class="color-boxes">
+        <div class="color-block large"
+            style="background-color: #F25381; color: #EBEBEB;">#F25381
+        </div>
+        <div class="color-block medium" 
+            style="background-color: #053855; color: #EBEBEB;">#053855
+        </div>
+        <div class="small-container">
+            <div class="color-block small"
+                style="background-color: #27709A; color: #EBEBEB;" >#27709A
+            </div>
+            <div class="color-block small"
+                style="background-color: #FFBED4; color: #053855;">#FFBED4
+            </div>
+            <div class="color-block small"
+                style="background-color: #FFECEF; color: #053855;">#FFECEF
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. 디자인_팀원 소개 -->
+<section id="section5_Color" class="section color-style-section bg-dark">
+    <div class="team-section">
+        <h2 class="team-title">Team</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <video src="./Video/TeamDabin.mp4" autoplay loop muted></video>
+                <div class="info">
+                <h3>박다빈</h3>
+                <p>내용</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <video src="./Video/TeamNarin.mp4" autoplay loop muted></video>
+                <div class="info">
+                <h3>이나린</h3>
+                <p>내용</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <video src="./Video/TeamTaehyung.mp4" autoplay loop muted></video>
+                <div class="info">
+                <h3>이태형</h3>
+                <p>내용</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 푸터 영역 -->
+        <div class="footer">
+            © 2025 기억의 조각. All rights reserved.
+        </div>
+
+        
+    <script src="./script.js"></script>
+</body>
+</html>
